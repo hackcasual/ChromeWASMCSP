@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src https://s3.amazonaws.com; child-src https://s3.amazonaws.com; object-src 'none'; style-src 'unsafe-inline'; script-src https: 'self'; worker-src https://s3.amazonaws.com; "
+    />
+    <title>WebAssembly CSP test</title>
+    <style>
+      .status {
+        text-align: center;
+        font-family: arial, sans;
+        font-weight: bold;
+        font-size: 48pt;
+      }
+      .good {
+        color: green;
+      }
+      .bad {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="status">WASM Status</div>
+    <div id="output"></div>
+    <script src="csp_test_worker_no_streaming.js"></script>
+  </body>
+</html>
